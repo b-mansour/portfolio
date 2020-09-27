@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: gray;
+  color: white;
+  font-family: "Encode Sans", sans-serif;
+}
+
+.container {
+  width: 80%;
+  max-width: 100%;
+}
+.h {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  border-bottom: 1px solid white;
+}
+
+.h ul {
+  display: flex;
+  list-style: none;
+}
+.h ul li {
+  margin: 10px;
+}
+.h ul li:hover {
+  background-color: gray;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+}
+.about {
+  font-size: 20px;
+  text-align: center;
+}
+
+.content {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-color: black;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid white;
+}
+
+.content .box img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+}
+
+.content .box {
+  position: relative;
+  display: inline-block; /* Make the width of box same as image */
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.content .box .title {
+  position: absolute;
+  z-index: 10;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 40%; /* Adjust this value to move the positioned div up and down */
+  text-align: center;
+  width: 60%; /* Set the width of the positioned div */
+}
+
+.content .box:hover {
+  cursor: pointer;
+}
+
+.container img:hover {
+  transform: scale(1.1);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+.container .title:hover {
+  opacity: 0.9;
+}
+
+footer {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: space-around;
+  border-top: 1px solid white;
+  margin-top: 40px;
+}
+
+footer div {
+  width: 300px;
+  margin: 20px;
+}
